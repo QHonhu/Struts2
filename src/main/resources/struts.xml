@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+  <struts>
+  
+  
+  <!--include节点是Struts中组件化的方式可以将每个功能模块独立到一个 XML中配置，然后用include节点引用-->
+  <include file="struts-default.xml"></include>
+  
+  
+  
+  <package name="fefault" namespace="/" extends="struts-default">
+  
+  <action name="struts" class="pack.test.Struts">
+  <result>/index.jsp</result>
+  </action>
+  
+  
+  <action name="addAction" method="add" class="pack.test.Struts">
+  <result>/add.jsp</result>
+  </action>
+  
+  <action name="updateAction" method="update" class="pack.test.Struts">
+  <result>/update.jsp</result>
+  </action>
+   
+  
+  </package>
+  <include file="struts.xml"></include>
+  
+  <constant file="struts.action.extension" value="html"></constant>>
+  
+  
+  
+  </struts>
